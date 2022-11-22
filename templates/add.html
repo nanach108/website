@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %}about{% endblock %}
+
+{% block content %}
+<h1>Add a students</h1>
+<br />
+<form action="/add" method="post">
+    name :<input name="name" />
+    city :<input name="city" />
+    addr :<input name="addr" />
+
+    <input type="submit" class="btn btn-success" />
+  </form>
+
+
+{% endblock %}
+ 

@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block title %}about{% endblock %}
+
+{% block content %}
+<h1>Students</h1>
+<br>
+<div class="row row-cols-1 row-cols-md-5 g-4">
+{{msg}}
+{% for n in ar %}
+<div class="col">
+    <div class="card">
+      <img src="https://picsum.photos/20{{loop.index}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">{{n.name}}<br />{{n.city}}</p>
+        <a href="/del/{{n.id}}" class="btn btn-danger">Delete :)</a>
+      </div>
+    </div>
+</div>
+{% endfor %}
+</div>    
+
+{% endblock %}
+ 
+   
